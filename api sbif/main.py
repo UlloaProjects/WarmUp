@@ -20,8 +20,10 @@ mayor_Uf = 0
 menor_Uf = 0
 mes_Menor= "No hubo meses con baja de UF"
 mes_Mayor= "No hubo meses con alza de UF"
+
 for x in data['UFs']:
     #print(x['Valor'])
+
     valor = x['Valor']
     valor = valor.replace(".","")
     valor = valor.replace(",",".")
@@ -54,6 +56,8 @@ for x in data['UFs']:
         if fecha.day ==1:
             uf = valor
             mes += 1
+
+print(data['UFs'])
 subio = sorted(subio.items(), key=lambda kv: kv[1])
 print(subio)
 bajo = sorted(bajo.items(), key=lambda kv: kv[1], reverse=True)
